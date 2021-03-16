@@ -35,41 +35,84 @@
 
 
 
-let vacationSpots = ["1", "2", "3"];
+let vacationSpots = ["Ft. Myers", "Sanibel Island", "Pine Island", "Cape Coral", "Captiva"];
 
 function pickMeALocation (locationOptions){
-    let positive = "yes";
-    let goHere = locationOptions[Math.floor(Math.random() * locationOptions.length)];
-    let maybeHere = locationOptions [Math.floor(Math.random() * locationOptions.length)];
-    
-    let makeAPick = prompt (goHere + "!" + " " + "Do you wish to pick this location? ");
-        while (makeAPick != positive){
-            
-                 makeAPick = prompt ("How about this location?" + " " + maybeHere);
-            }
-            console.log(goHere);
-        }
-      
+let positive = "yes";
+let goHere = locationOptions[Math.floor(Math.random() * locationOptions.length)];
 
-
-
+let makeAPick = prompt (goHere + "!" + " " + "Do you wish to pick this location? ");
+while (makeAPick != positive){
+let maybeHere = locationOptions [Math.floor(Math.random() * locationOptions.length)];
+    makeAPick = prompt ("How about this location?" + " " + maybeHere);
+}
+console.log(goHere);
+}
 
 pickMeALocation(vacationSpots);
-//come back to fix the randomizing
+
+
 
 //swap out letters with actual locations once it fully works
-let foodChoices = ["a", "b", "c"];
+let foodChoices = ["Joe's Crab Shack", "Twisted Lobster", "Izzy's Fish and Oysters", "FINS Seafood and Dive Bar", "Cape Cod Fish Company"];
 
 function letsEat (foodChoices){
-    let agree = "yes";
-    let eatHere = foodChoices [Math.floor(Math.random() * foodChoices.length)];
+let agree = "yes";
+let eatHere = foodChoices [Math.floor(Math.random() * foodChoices.length)];
+
+let whereToEat = prompt (eatHere + "," + " " + "Do you wish to dine here?");
+while (whereToEat != agree){
     let eatHere2= foodChoices [Math.floor(Math.random() * foodChoices.length)];
-    let whereToEat = prompt (eatHere + "," + " " + "Do you wish to dine here?");
-        while (whereToEat != agree){
-            whereToEat = prompt ("Would you rather dine here?" + " " + eatHere2);
-        
-        }
-        console.log(whereToEat);
+    whereToEat = prompt ("Would you rather dine here?" + " " + eatHere2);
+
+}
+console.log(eatHere);
 }
 
 letsEat (foodChoices);
+
+//entertainment
+
+let entertainment  = ["Sunset Sail", "Fishing charter", "Snorkeling", "Shelling", "Seaside cabana"];
+
+function entertainMe (entertainOptions){
+let yes = "yes";
+let attendHere = entertainOptions [Math.floor(Math.random() * entertainOptions.length)];
+
+let whatToDo = prompt (attendHere + "," + " " + "Would you like to include this activity");
+while (whatToDo != yes){
+    let secondOption= entertainOptions [Math.floor(Math.random() * entertainOptions.length)];
+    whatToDo = prompt ("Does this sound more fun?" + " " + secondOption);
+
+}
+console.log(attendHere);
+}
+
+entertainMe (entertainment);
+
+
+//travel by
+
+
+let modesOfTransportation = ["Bicycle", "Moped", "Uber", "Walking Trail", "Rental car"];
+
+function howToGetThere (travelOptions){
+let confirm = "yes"
+let wayOfTravel = travelOptions [Math.floor(Math.random() * travelOptions.length)];
+let howToTravel = prompt (wayOfTravel + "," + " " + "Would you like to select this mode of transportation?");
+while (howToTravel != confirm){
+    let altTravelOption = travelOptions [Math.floor(Math.random() * travelOptions.length)];
+    howToTravel = prompt ("Does this suit your needs better?" + " " + altTravelOption);
+}
+console.log (wayOfTravel);
+
+}
+
+
+howToGetThere (modesOfTransportation);
+
+
+//combine all the elemements into one function?
+
+
+
